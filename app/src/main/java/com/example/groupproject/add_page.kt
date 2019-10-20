@@ -7,11 +7,11 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 
-class MainActivity : AppCompatActivity() {
+class add_page : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_add_page)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
