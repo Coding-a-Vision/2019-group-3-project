@@ -4,10 +4,20 @@ android:id="@+id/menu"
 android:layout_width="wrap_content"
 android:layout_height="wrap_content">
 
-    <item android:title="@string/home" />
-    <item android:title="@string/feed" />
-    <item android:title="@string/add" />
-    <item android:title="@string/opml" />
-    <item android:title="@string/settings" />
+    <item
+        android:id="@+id/button_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/button_manage_feed"
+        android:title="@string/feed" />
+    <item
+        android:id="@+id/button_add"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/button_opml"
+        android:title="@string/opml" />
+    <item
+        android:id="@+id/button_settings"
+        android:title="@string/settings" />
 
 </menu>

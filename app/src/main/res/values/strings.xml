@@ -5,4 +5,5 @@
     <string name="feed">Manage your feed</string>
     <string name="add">Add feed</string>
     <string name="opml">Opml</string>
+    <string name="ok">Ok</string>
 </resources>
