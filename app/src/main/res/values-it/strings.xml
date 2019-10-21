@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FeedReader3</string>
+    <string name="add">Aggiungi</string>
+    <string name="feed">Gestisci i tuoi feed</string>
+    <string name="home">Home</string>
+    <string name="opml">Opml</string>
+    <string name="settings">Impostazioni</string>
+</resources>
