@@ -43,6 +43,12 @@ class settings : AppCompatActivity() {
                 true
             }
 
+            R.id.button_opml -> {
+                val intent = Intent(this, opml::class.java)
+                startActivity(intent)
+                true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
