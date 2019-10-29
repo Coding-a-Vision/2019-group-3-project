@@ -6,6 +6,7 @@
     <string name="add">Add feed</string>
     <string name="opml">Opml</string>
     <string name="ok">Ok</string>
-    <string name="login_text">LOGIN</string>
-    <string name="logo_image">logo_image</string>
+    <string name="login_text" translatable="false">LOGIN</string>
+    <string name="logo_image" translatable="false">logo_image</string>
+    <string name="searchHint">Enter the link to the feed or keywords to search</string>
 </resources>

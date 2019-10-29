@@ -1,4 +1,4 @@
-package com.example.groupproject
+package com.reader.groupproject
 
 import org.junit.Test
 
