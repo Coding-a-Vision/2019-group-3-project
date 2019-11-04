@@ -1,4 +1,4 @@
-package com.example.groupproject
+package com.reader.groupproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,12 +6,29 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class opml : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_opml)
+
+        val button = findViewById(R.id.button) as Button
+        button.setOnClickListener {
+            Toast.makeText(this@opml, "You clicked me.", Toast.LENGTH_SHORT).show()
+        }
+
+        val button2 = findViewById(R.id.button2) as Button
+        button2.setOnClickListener {
+            Toast.makeText(this@opml, "You clicked me.", Toast.LENGTH_SHORT).show()
+        }
+
+        val button3 = findViewById(R.id.button3) as Button
+        button3.setOnClickListener {
+            Toast.makeText(this@opml, "You clicked me.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -19,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         inflater.inflate(R.menu.menu, menu)
         return true
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
 
@@ -51,4 +67,5 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }

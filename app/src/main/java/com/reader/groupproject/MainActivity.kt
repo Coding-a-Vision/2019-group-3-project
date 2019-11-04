@@ -1,4 +1,4 @@
-package com.example.groupproject
+package com.reader.groupproject
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,11 +7,11 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 
-class add_page : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_page)
+        setContentView(R.layout.activity_main)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

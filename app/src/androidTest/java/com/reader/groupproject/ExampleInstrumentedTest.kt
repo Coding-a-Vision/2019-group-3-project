@@ -1,4 +1,4 @@
-package com.example.groupproject
+package com.reader.groupproject
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
