@@ -9,8 +9,8 @@ android:layout_height="wrap_content">
         android:title="@string/home" />
 
     <item
-        android:id="@+id/add_page"
-        android:title="@string/add" />
+        android:id="@+id/addPageFragment"
+        android:title="Add feed" />
 
     <item
         android:id="@+id/opmlFragment"

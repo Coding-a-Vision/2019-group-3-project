@@ -1,25 +1,29 @@
 package com.reader.groupproject
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.SearchView
 import android.widget.TextView
 
+/**
+ * A simple [Fragment] subclass.
+ */
+class addPageFragment : Fragment() {
 
-class add_page : AppCompatActivity() {
     val search = search_class()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_page)
-
-        val resultText = findViewById<TextView>(R.id.textView2)
-        val searchView = findViewById<SearchView>(R.id.search)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view =  inflater.inflate(R.layout.fragment_add_page, container, false)
+        val resultText = view.findViewById<TextView>(R.id.textView2)
+        val searchView = view.findViewById<SearchView>(R.id.search)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(s: String): Boolean {
@@ -34,5 +38,6 @@ class add_page : AppCompatActivity() {
                 return true
             }
         })
+        return view
     }
 }
