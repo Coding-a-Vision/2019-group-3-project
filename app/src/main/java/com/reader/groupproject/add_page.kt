@@ -23,14 +23,12 @@ class add_page : AppCompatActivity() {
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(s: String): Boolean {
-                //set_link(s)
                 search.search_fun(s)
                 resultText.text = search.text
                 return true
             }
 
             override fun onQueryTextChange(s: String): Boolean {
-                //set_link(s)
                 search.search_fun(s)
                 resultText.text = search.text
                 return true
