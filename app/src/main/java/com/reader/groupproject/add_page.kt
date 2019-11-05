@@ -19,42 +19,23 @@ class add_page : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_page)
 
-        Thread(Runnable {
-            search_fun()
-        }).start()
-
+        val resultText = findViewById<TextView>(R.id.textView2)
         val searchView = findViewById<SearchView>(R.id.search)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
             override fun onQueryTextSubmit(s: String): Boolean {
-                set_link(s)
+                //set_link(s)
+                search.search_fun(s)
+                resultText.text = search.text
                 return true
             }
 
             override fun onQueryTextChange(s: String): Boolean {
-                set_link(s)
+                //set_link(s)
+                search.search_fun(s)
+                resultText.text = search.text
                 return true
             }
         })
-    }
-
-    fun set_link(new_link: String){
-        this.link = new_link
-    }
-
-    fun search_fun() {
-        while (true) {
-            search.search_fun(link)
-
-            while (search.complete == false) {
-                Thread.sleep(3000)
-            }
-
-            runOnUiThread {
-                findViewById<TextView>(R.id.textView2).text = search.text
-            }
-
-            search.complete = false
-        }
     }
 }
