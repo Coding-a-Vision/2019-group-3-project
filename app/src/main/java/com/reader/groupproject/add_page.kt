@@ -12,7 +12,6 @@ import android.widget.TextView
 
 
 class add_page : AppCompatActivity() {
-    var link: String = ""
     val search = search_class()
 
     override fun onCreate(savedInstanceState: Bundle?) {
