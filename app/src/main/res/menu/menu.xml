@@ -5,19 +5,19 @@ android:layout_width="wrap_content"
 android:layout_height="wrap_content">
 
     <item
-        android:id="@+id/button_home"
+        android:id="@+id/mainFragment"
         android:title="@string/home" />
+
     <item
-        android:id="@+id/button_manage_feed"
-        android:title="@string/feed" />
-    <item
-        android:id="@+id/button_add"
+        android:id="@+id/add_page"
         android:title="@string/add" />
+
     <item
-        android:id="@+id/button_opml"
-        android:title="@string/opml" />
+        android:id="@+id/opmlFragment"
+        android:title="import/export OPML" />
+
     <item
-        android:id="@+id/button_settings"
+        android:id="@+id/settingsFragment"
         android:title="@string/settings" />
 
 </menu>

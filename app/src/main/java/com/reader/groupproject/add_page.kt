@@ -38,44 +38,6 @@ class add_page : AppCompatActivity() {
         })
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle item selection
-
-        return when (item.itemId) {
-            R.id.button_add -> {
-                val intent = Intent(this, add_page::class.java)
-                startActivity(intent)
-                true
-            }
-
-            R.id.button_home -> {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                true
-            }
-
-            R.id.button_settings -> {
-                val intent = Intent(this, settings::class.java)
-                startActivity(intent)
-                true
-            }
-
-            R.id.button_opml -> {
-                val intent = Intent(this, opml::class.java)
-                startActivity(intent)
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
-
     fun set_link(new_link: String){
         this.link = new_link
     }
