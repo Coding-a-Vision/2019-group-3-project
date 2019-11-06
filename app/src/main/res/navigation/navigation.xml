@@ -20,9 +20,9 @@
         android:name="com.reader.groupproject.opmlFragment"
         android:label="OPML"
         tools:layout="@layout/fragment_opml" />
-    <activity
-        android:id="@+id/add_page"
-        android:name="com.reader.groupproject.add_page"
+    <fragment
+        android:id="@+id/addPageFragment"
+        android:name="com.reader.groupproject.addPageFragment"
         android:label="add page"
-        tools:layout="@layout/activity_add_page" />
+        tools:layout="@layout/fragment_add_page" />
 </navigation>

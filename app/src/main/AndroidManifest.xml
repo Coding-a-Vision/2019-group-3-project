@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.reader.groupproject.add_page" />
         <activity android:name="com.reader.groupproject.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

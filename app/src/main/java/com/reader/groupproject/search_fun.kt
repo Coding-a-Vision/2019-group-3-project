@@ -1,8 +1,10 @@
 package com.reader.groupproject
 
+import android.util.Log
 import android.webkit.URLUtil
+import androidx.lifecycle.ViewModel
 
-class search_class{
+class search_class : ViewModel() {
     var text: String? = null
     var complete: Boolean = false
 
@@ -18,7 +20,7 @@ class search_class{
                 }
 
                 override fun onError(error: Throwable) {
-                    update_text("Error " + error.toString())
+                    Log.i("Error ", error.toString())
                 }
             })
 
@@ -27,8 +29,9 @@ class search_class{
         }
     }
 
-    fun update_text(Message: String?){
-        text = Message
+    fun update_text(message: String?){
+        text = message
+        viewModel.text.value = text
         this.complete = true
     }
 }
