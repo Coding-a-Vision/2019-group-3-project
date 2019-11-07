@@ -31,7 +31,7 @@ class search_class : ViewModel() {
 
     fun update_text(message: String?){
         text = message
-        viewModel.text.value = text
+        viewModel.changeText(message.toString())
         this.complete = true
     }
 }
