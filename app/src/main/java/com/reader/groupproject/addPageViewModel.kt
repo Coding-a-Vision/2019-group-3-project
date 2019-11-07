@@ -9,4 +9,8 @@ class addPageViewModel: ViewModel() {
     init {
         text.value = ""
     }
+
+    fun changeText(newText: String) {
+        text.postValue(newText)
+    }
 }
