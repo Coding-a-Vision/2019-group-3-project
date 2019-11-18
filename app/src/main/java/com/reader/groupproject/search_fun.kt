@@ -5,7 +5,11 @@ import android.webkit.URLUtil
 import androidx.lifecycle.ViewModel
 
 class search_class : ViewModel() {
+    var text: String? = null
+    var complete: Boolean = false
+
     fun search_fun(query: String) {
+        this.complete = false
         if (URLUtil.isValidUrl(query)) {
             val net = internet_library()
 
@@ -26,6 +30,8 @@ class search_class : ViewModel() {
     }
 
     fun update_text(message: String?){
+        text = message
         viewModel.changeText(message.toString())
+        this.complete = true
     }
 }
