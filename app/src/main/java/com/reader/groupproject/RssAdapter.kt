@@ -3,10 +3,12 @@ package com.reader.groupproject
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.prof.rssparser.Article
 
 class RssAdapter :
@@ -23,6 +25,11 @@ class RssAdapter :
         listItem.let {
             holder.title.text = it.title
             holder.date.text = it.pubDate
+            Glide
+                .with(holder.image.context)
+                .load(it.image)
+                .fitCenter()
+                .into(holder.image)
             
         }
     }
@@ -31,6 +38,7 @@ class RssAdapter :
 
         val title = itemView.findViewById<View>(R.id.title_text) as TextView
         val date = itemView.findViewById<View>(R.id.date_text) as TextView
+        val image = itemView.findViewById<View>(R.id.image_view) as ImageView
     }
 
     class ListItemDiffCallback : DiffUtil.ItemCallback<Article>() {
