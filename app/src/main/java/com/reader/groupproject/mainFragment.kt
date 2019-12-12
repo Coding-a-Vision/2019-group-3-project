@@ -8,9 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainFragment : Fragment() {
+
  lateinit var viewModel: MainViewModel
+    private val adapter  = RssAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,12 +24,17 @@ class MainFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
+        val rssListView: RecyclerView = view.findViewById(R.id.recycler_view)
+        rssListView.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL, false)
+        rssListView.itemAnimator = DefaultItemAnimator()
+        rssListView.adapter = adapter
+
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
         viewModel.articleList.observe(
             this,
             Observer {
-
+                adapter.submitList(it)
             })
 
         return view

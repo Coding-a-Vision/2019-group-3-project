@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 
 class MainViewModel : ViewModel() {
-    private val url = "https://www.nintendo.it/news.xml"
+    private val url = "https://www.telefonino.net/feed/"
 
     val articleList = MutableLiveData<List<Article>>()
 
