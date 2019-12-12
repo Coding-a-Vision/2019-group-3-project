@@ -23,26 +23,7 @@ class RssAdapter :
         listItem.let {
             holder.title.text = it.title
             holder.date.text = it.pubDate
-
-//            holder.itemView.setOnClickListener {
-//                val bundle = Bundle()
-//                bundle.putLong("id", listItem.noteId)
-//                holder.itemView.findNavController().navigate(R.id.detailScreen, bundle)
-//                viewModel.send(ListEvent.GetNote(listItem.noteId))
-//            }
-//
-//            holder.check.setOnClickListener {
-//                viewModel.send(
-//                    ListEvent.ModifyNote(
-//                        Note(
-//                            noteId = listItem.noteId,
-//                            note = holder.note.text.toString(),
-//                            checked = holder.check.isChecked
-//                        )
-//                    )
-//                )
-//            }
-//        }
+            
         }
     }
 
