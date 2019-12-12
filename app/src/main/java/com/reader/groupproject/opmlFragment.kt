@@ -13,7 +13,7 @@ import android.widget.Toast
 /**
  * A simple [Fragment] subclass.
  */
-class opmlFragment : Fragment() {
+class OpmlFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
