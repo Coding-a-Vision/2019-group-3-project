@@ -25,4 +25,8 @@
         android:name="com.reader.groupproject.AddPageFragment"
         android:label="add page"
         tools:layout="@layout/fragment_add_page" />
+    <fragment
+        android:id="@+id/readerFragment"
+        android:name="com.reader.groupproject.ReaderFragment"
+        android:label="ReaderFragment" />
 </navigation>

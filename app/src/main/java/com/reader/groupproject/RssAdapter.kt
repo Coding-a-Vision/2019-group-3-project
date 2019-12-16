@@ -1,15 +1,19 @@
 package com.reader.groupproject
 
+import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.prof.rssparser.Article
+import java.text.SimpleDateFormat
 
 class RssAdapter :
     ListAdapter<Article, RssAdapter.ListItemViewHolder>(ListItemDiffCallback()) {
@@ -30,7 +34,13 @@ class RssAdapter :
                 .load(it.image)
                 .fitCenter()
                 .into(holder.image)
-            
+
+            holder.itemView.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putInt("id", position)
+                Log.i("position", "$position")
+                it.findNavController().navigate(R.id.readerFragment, bundle)
+            }
         }
     }
 
