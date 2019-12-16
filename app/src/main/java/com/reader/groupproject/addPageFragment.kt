@@ -12,12 +12,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
-lateinit var viewModel: AddPageViewModel
+
 
 class AddPageFragment : Fragment() {
 
     val search = search_class()
-
+    lateinit var viewModel: AddPageViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

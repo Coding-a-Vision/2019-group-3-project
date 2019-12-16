@@ -26,6 +26,6 @@ class search_class : ViewModel() {
     }
 
     fun update_text(message: String?){
-        viewModel.changeText(message.toString())
+      //  viewModel.changeText(message.toString())
     }
 }

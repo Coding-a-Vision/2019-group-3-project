@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/title_text"
+        android:id="@+id/reader_title_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/fab_margin"
@@ -13,33 +14,39 @@
         android:textAlignment="center"
         android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/image_news"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fab_margin"
-        android:contentDescription="@string/image_news"
-        android:padding="@dimen/fab_margin"
-        android:paddingStart="@dimen/fab_margin"
-        android:paddingEnd="@dimen/fab_margin"
-        android:textAlignment="center"
-        app:srcCompat="@android:drawable/ic_delete" />
 
     <ScrollView
         android:id="@+id/article_scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/article_text"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="@dimen/fab_margin"
-            android:paddingEnd="@dimen/fab_margin"
-            android:text="ArticleText"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/image_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:contentDescription="@string/image_news"
+                android:padding="@dimen/fab_margin"
+                android:paddingStart="@dimen/fab_margin"
+                android:paddingEnd="@dimen/fab_margin"
+                android:textAlignment="center"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+            <TextView
+                android:id="@+id/article_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/fab_margin"
+                android:paddingEnd="@dimen/fab_margin"
+                android:text="ArticleText"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </LinearLayout>
     </ScrollView>
 
     <Button

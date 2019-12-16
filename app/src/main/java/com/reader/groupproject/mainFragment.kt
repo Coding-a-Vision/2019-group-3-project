@@ -11,10 +11,10 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+lateinit var viewModel: MainViewModel
 class MainFragment : Fragment() {
 
- lateinit var viewModel: MainViewModel
+
     private val adapter  = RssAdapter()
 
     override fun onCreateView(
