@@ -14,25 +14,16 @@
         android:textAlignment="center"
         android:textSize="24sp" />
 
-
-    <ScrollView
-        android:id="@+id/article_scroll"
+    <WebView
+        android:id="@+id/article_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none">
-
-        <WebView
-            android:id="@+id/article_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="@dimen/fab_margin"
-            android:paddingEnd="@dimen/fab_margin"
-            android:scrollbars="none"
-            android:text="ArticleText"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-    </ScrollView>
+        android:paddingStart="@dimen/fab_margin"
+        android:paddingEnd="@dimen/fab_margin"
+        android:scrollbars="none"
+        android:text="ArticleText"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/share_button"
