@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -19,22 +20,19 @@ class ReaderFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_reader, container, false)
         val titleView = view.findViewById<TextView>(R.id.reader_title_text)
-        val articleText = view.findViewById<TextView>(R.id.article_text)
-        val imageView = view.findViewById<ImageView>(R.id.image_news)
+        val articleText = view.findViewById<WebView>(R.id.article_text)
 
         val position = arguments?.getInt("id")
         Log.i("position", "${viewModel.articleList.value?.get(position!!)}")
         titleView.text = viewModel.articleList.value?.get(position!!)?.title
-        articleText.text = viewModel.articleList.value?.get(position!!)?.description
+        articleText.loadData(
+            viewModel.articleList.value?.get(position!!)?.description,
+            "text/html",
+            "UTF-8"
+        )
 
-        Glide
-            .with(this)
-            .load(viewModel.articleList.value?.get(position!!)?.image)
-            .fitCenter()
-            .into(imageView)
         return view
     }
 }

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.prof.rssparser.Article
+import java.text.SimpleDateFormat
 
 class RssAdapter :
     ListAdapter<Article, RssAdapter.ListItemViewHolder>(ListItemDiffCallback()) {

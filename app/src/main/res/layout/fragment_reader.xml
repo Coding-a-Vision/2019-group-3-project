@@ -18,35 +18,20 @@
     <ScrollView
         android:id="@+id/article_scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <WebView
+            android:id="@+id/article_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/fab_margin"
+            android:paddingEnd="@dimen/fab_margin"
+            android:scrollbars="none"
+            android:text="ArticleText"
+            android:textAlignment="center"
+            android:textSize="24sp" />
 
-            <ImageView
-                android:id="@+id/image_news"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/fab_margin"
-                android:contentDescription="@string/image_news"
-                android:padding="@dimen/fab_margin"
-                android:paddingStart="@dimen/fab_margin"
-                android:paddingEnd="@dimen/fab_margin"
-                android:textAlignment="center"
-                app:srcCompat="@android:drawable/ic_delete" />
-
-            <TextView
-                android:id="@+id/article_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/fab_margin"
-                android:paddingEnd="@dimen/fab_margin"
-                android:text="ArticleText"
-                android:textAlignment="center"
-                android:textSize="24sp" />
-        </LinearLayout>
     </ScrollView>
 
     <Button
@@ -57,5 +42,6 @@
         android:paddingBottom="@dimen/fab_margin"
         android:text="@string/share_button"
         android:textAlignment="center" />
+
 
 </LinearLayout>
